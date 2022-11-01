@@ -32,7 +32,8 @@ node{
 	try{
 		sh 'docker rm -f tomcattest'
 	}catch(error){
-		//  do nothing if there is an exception
+		//  do nothing if there is an exception 
+		//  commit for automation deployment using ci cd
 	}
    stage('Docker deployment'){
    sh 'docker run -d -p 8090:8080 --name tomcattest saidamo/myweb:0.0.2' 
